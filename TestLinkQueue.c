@@ -17,6 +17,7 @@ void main() {
 		scanf("%*c");
 		data = TopQueue(pQueue);
 		printf("Top data : %s\n", data);
+		PrintAllDataInTheQueue(pQueue);
 	}
 
 	
