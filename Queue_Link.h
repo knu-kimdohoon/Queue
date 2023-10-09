@@ -42,8 +42,8 @@ void Enqueue(Queue* pQueue, char* data) {
 		pQueue->rear = Node;
 	}
 	pQueue->count++;
-	//printf("data : %s[Enqueue]\n", pQueue->front->data);
-	//printf("count : %d[Enqueue]\n", pQueue->count);
+	printf("pQueue->front->data : %s\n", pQueue->front->data);
+	printf("pQueue->rear->data : %s\n", pQueue->rear->data);
 }
 
 char* Dequeue(Queue* pQueue) {
