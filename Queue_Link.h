@@ -95,4 +95,24 @@ char* TopQueue(Queue* pQueue) {
 	}
 }
 
+void PrintAllDataInTheQueue(Queue* pQueue) {
+	FILE* fp = NULL;
+	char* data = NULL;
+	QueueNode* Node = pQueue->front;
+
+	fp = fopen("Queue.txt", "a");
+	if (fp == NULL) {
+		exit(1);
+	}
+	while (Node != NULL) {
+		fputs(Node->data, fp);
+		fputc(' ', fp);
+		Node = Node->link;
+	}
+	fputc('\n', fp);
+	fclose(fp);
+}
+
+
+
 
